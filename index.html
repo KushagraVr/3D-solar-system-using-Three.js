@@ -463,7 +463,7 @@
                 };
                 createStars();
                 
-            const sunTexture = new THREE.TextureLoader().load('/3D-solar-system-using-Three.js/textures/sun.jpg');
+            const sunTexture = new THREE.TextureLoader().load('./textures/sun.jpg');
 
 const sunMaterial = new THREE.MeshBasicMaterial({
     map: sunTexture
@@ -559,7 +559,7 @@ scene.add(sun);
                     
                     let planetTexture;
 try {
-    planetTexture = textureLoader.load(`/3D-solar-system-using-Three.js/textures/${planetData.name.toLowerCase()}.jpg`);
+    planetTexture = textureLoader.load(`./textures/${planetData.name.toLowerCase()}.jpg`);
 } catch (e) {
     console.warn(`Texture not found for ${planetData.name}, using fallback color`);
 }
